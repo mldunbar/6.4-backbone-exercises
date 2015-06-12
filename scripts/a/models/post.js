@@ -1,20 +1,16 @@
 var Post = Backbone.Model.extend({
-  url: 'http://tiny-lasagna-server.herokuapp.com/collections/blog',
-    defaults: {
-      title: 'yolo',
-      body: 'mama...just killed a man'
-  },
+  idAttribute: '_id',
 
-  // var title = new Title(){
-  //   this.get('title');
-  //   console.log('title');
-  // },
-  //
-  // var body = new Body(){
-  //   this.get('body');
-  //   console.log('body');
-  // },
+    defaults: {
+      'title' : '',
+      'body' : ''
+  },
 
 });
 
-export default Post;
+var PostCollection = Backbone.Collection.extend({
+  model: Post,
+  url: 'http://tiny-lasagna-server.herokuapp.com/collections/MLD',
+});
+
+export default {Post, PostCollection};
