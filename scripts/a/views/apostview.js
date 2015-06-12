@@ -5,7 +5,7 @@ export default Backbone.View.extend({
 
   template: JST.aindex,
 
-  event : {
+  events : {
     'click button' : 'submitPost',
   },
 
@@ -20,8 +20,8 @@ export default Backbone.View.extend({
   submitPost: function(e) {
     e.preventDefault();
 
-    var title = this.$('title-post').val();
-    var body = this.$('body-post').val();
+    var title = this.$('.title-post').val();
+    var body = this.$('.body-post').val();
 
     this.collection.create({
       title: title,

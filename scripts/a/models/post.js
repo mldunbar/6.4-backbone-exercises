@@ -2,8 +2,8 @@ var Post = Backbone.Model.extend({
   idAttribute: '_id',
 
     defaults: {
-      'title' : '',
-      'body' : ''
+      title : '',
+      body : ''
   },
 
 });
@@ -13,4 +13,4 @@ var PostCollection = Backbone.Collection.extend({
   url: 'http://tiny-lasagna-server.herokuapp.com/collections/MLD',
 });
 
-export default {Post, PostCollection};
+export default {PostCollection};
