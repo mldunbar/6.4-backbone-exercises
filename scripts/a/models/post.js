@@ -2,8 +2,8 @@ var Post = Backbone.Model.extend({
   idAttribute: '_id',
 
     defaults: {
-      title : '',
-      body : ''
+      'title' : '',
+      'body' : ''
   },
 
 });
