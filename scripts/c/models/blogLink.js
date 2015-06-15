@@ -1,10 +1,11 @@
 var BlogLink = Backbone.Model.extend({
   idAttribute: '_id',
 
-    defaults : {
-      'title' : '',
-      'body' : ''
-    }
+  toJSON: function() {
+      return _.extend({}, _.omit(this.attributes, '_id'), {
+        id: this.id
+      });
+    },
 
 });
 
